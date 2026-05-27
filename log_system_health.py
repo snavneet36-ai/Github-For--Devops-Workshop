@@ -17,12 +17,16 @@ def log_system_health( log_file = "System_health_log.txt"):
     
     
     total,used,free = shutil.disk_usage("C:/")
+   # print(f"CPU Usage: {cpu_usage}%")
+    print("Space in c drive:")
     print(f"TOTAL: , {total//(2**30)}, GB | USED: , {used//(2**30)}, GB | FREE: , {free//(2**30)}, GB")
 
     total,used,free = shutil.disk_usage("D:/")
+    print("Space in D drive:")
     print(f"TOTAL: , {total//(2**30)}, GB | USED: , {used//(2**30)}, GB | FREE: , {free//(2**30)}, GB")
 
     total,used,free = shutil.disk_usage("E:/")
+    print("Space in E drive:")
     print(f"TOTAL: , {total//(2**30)}, GB | USED: , {used//(2**30)}, GB | FREE: , {free//(2**30)}, GB") 
 
     with open(log_file, "a") as f:
