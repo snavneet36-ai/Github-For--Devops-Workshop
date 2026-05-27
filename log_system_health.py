@@ -4,9 +4,12 @@ import shutil
 import time
 
 
+
 def log_system_health( log_file = "System_health_log.txt"):
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    print (f"timestamp: {timestamp}")
 
     cpu_usage = psutil.cpu_percent(interval=1)
 
